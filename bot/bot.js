@@ -40,4 +40,4 @@ client.on('message', msg => {
     }
 });
 
-client.login(token_store.token);
+client.login(secret_store.token);
