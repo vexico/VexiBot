@@ -1,0 +1,24 @@
+{
+  "name": "bowling-ball",
+  "version": "1.0.0",
+  "description": "A bot for taking down Vooperia",
+  "main": "bot/bot.js",
+  "scripts": {
+    "test": "node bot/bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.imbl.me:brendanlane/bowling-ball.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "spikeviper",
+    "vooperia"
+  ],
+  "author": "Brendan Lane",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
