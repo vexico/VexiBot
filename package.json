@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A bot for taking down Vooperia",
   "main": "bot/bot.js",
+  "type": "module",
   "scripts": {
     "test": "node bot/bot.js"
   },
@@ -19,6 +20,7 @@
   "author": "Brendan Lane",
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
+    "axios": "^0.19.2",
     "discord.js": "^12.2.0"
   }
 }
