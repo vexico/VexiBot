@@ -1,5 +1,5 @@
 export default
 {
-    "token":"discord_bot_token_here",
-    "api_key":"spookvooper_api_key_here"
+    // Discord bot token for front-end
+    "token":"NzM3MDE0OTk3ODg4MTM5Mjk1.Xx3MtA.MjbHQX6Z2hqiqe-iNRMI-9Hf1UQ"
 };

@@ -4,19 +4,23 @@
 // Import necessary modules
 import axios from "axios";
 import config from "../../config.js";
-import secret_store from "../../secret_store.js";
 
 // Start of module
-function groupPayEntityBySvid(toEntity, amount) {
+
+// Function to pay from the group which is marked as a payment
+function groupPayEntityBySvid(toEntity, amount, auth) {
+    // Call the base api + the correct route
     axios.get(`${config.base_api_url}/eco/SendTransactionByIDs`, {
+        // Set parameters
         params: {
             from: config.default_group_svid,
             to: toEntity,
             amount: amount,
-            auth: secret_store.api_key,
+            auth: auth,
             detail: "payment"
         }
     })
+    // Handle success + errors
         .then(function (response) {
             return response.data;
         })
@@ -25,16 +29,20 @@ function groupPayEntityBySvid(toEntity, amount) {
         });
 }
 
-function groupMakeSaleToEntity(toEntity, amount) {
+// Function to pay from the group which is marked as a sale
+function groupMakeSaleToEntity(toEntity, amount, auth) {
+    // Call the base api + the correct route
     axios.get(`${config.base_api_url}/eco/SendTransactionByIDs`, {
+        // Set parameters
         params: {
             from: config.default_group_svid,
             to: toEntity,
             amount: amount,
-            auth: secret_store.api_key,
+            auth: auth,
             detail: "sale"
         }
     })
+    // Handle success + errors
         .then(function (response) {
             return response.data;
         })
