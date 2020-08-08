@@ -116,4 +116,4 @@ dist
 # Start of dedicated files
 #
 
-secret_store.js
+bot/secret_store.js
