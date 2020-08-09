@@ -25,7 +25,11 @@ function convertUser(type, method, input) {
                 });
         } else if (method == "username") {
             // Make a request to the api + the correct route + parameters
-            axios.get(`${config.base_api_url}/user/GetSVIDFromUsername?username=${input}`)
+            axios.get(`${config.base_api_url}/user/GetSVIDFromUsername`, {
+                params: {
+                    username: input
+                }
+            })
                 // Handle error + correct repsonse
                 .then(function (response) {
                     returnedError = false;
@@ -98,7 +102,7 @@ function convertUser(type, method, input) {
     }
 }
 
-function convertGroup(type, imput) {
+function convertGroup(type, input) {
     if (type == "svid") {
         // Make a request to the api + the correct route + parameters
         axios.get(`${config.base_api_url}/group/GetSVIDFromName?name=${input}`)
