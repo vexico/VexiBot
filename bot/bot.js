@@ -17,7 +17,7 @@ import { addKey, findKey } from "./modules/setup/KeyManager.js";
 //
 
 // Define major bot imports and variables
-import Discord, { Message } from 'discord.js';
+import Discord from 'discord.js';
 
 const client = new Discord.Client();
 const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

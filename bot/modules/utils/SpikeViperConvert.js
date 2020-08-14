@@ -4,6 +4,7 @@
 // Import necessary modules
 import axios from "axios";
 import config from "../../config.js";
+import { removeQuotes } from "./ApiQuoteRemover.js";
 
 // Starting variables
 var returnedError = 0;
@@ -12,8 +13,12 @@ var returnedError = 0;
 function convertUser(type, method, input) {
     if (type == "svid") {
         if (method == "discord") {
-            // Make a request to the api + the correct route + parameters
-            axios.get(`${config.base_api_url}/user/GetSVIDFromDiscord?discordid=${input}`)
+            // Make a request to the api + the correct route
+            axios.get(`${config.base_api_url}/user/GetSVIDFromDiscord`, {
+                params: {
+                    discordid: removeQuotes(input)
+                }
+            })
                 // Handle error + correct repsonse
                 .then(function (response) {
                     returnedError = false;
@@ -27,7 +32,7 @@ function convertUser(type, method, input) {
             // Make a request to the api + the correct route + parameters
             axios.get(`${config.base_api_url}/user/GetSVIDFromUsername`, {
                 params: {
-                    username: input
+                    username: lonr
                 }
             })
                 // Handle error + correct repsonse
@@ -41,7 +46,11 @@ function convertUser(type, method, input) {
                 });
         } else if (method == "minecraft") {
             // Make a request to the api + the correct route + parameters
-            axios.get(`${config.base_api_url}/user/GetSVIDFromMinecraft?minecraftid=${input}`)
+            axios.get(`${config.base_api_url}/user/GetSVIDFromMinecraft`, {
+                params: {
+                    minecraftid: removeQuotes(input)
+                }
+            })
                 // Handle error + correct repsonse
                 .then(function (response) {
                     returnedError = false;
@@ -58,7 +67,11 @@ function convertUser(type, method, input) {
     } else if (type == "username") {
         if (method == "svid") {
             // Make a request to the api + the correct route + parameters
-            axios.get(`${config.base_api_url}/user/GetUsername?svid=${input}`)
+            axios.get(`${config.base_api_url}/user/GetUsername`, {
+                params: {
+                    svid: removeQuotes(input)
+                }
+            })
                 // Handle error + correct repsonse
                 .then(function (response) {
                     returnedError = false;
@@ -70,7 +83,11 @@ function convertUser(type, method, input) {
                 });
         } else if (method == "discord") {
             // Make a request to the api + the correct route + parameters
-            axios.get(`${config.base_api_url}/user/GetUsernameFromDiscord?discordid=${input}`)
+            axios.get(`${config.base_api_url}/user/GetUsernameFromDiscord`, {
+                params: {
+                    discordid: removeQuotes(input)
+                }
+            })
                 // Handle error + correct repsonse
                 .then(function (response) {
                     returnedError = false;
@@ -82,7 +99,11 @@ function convertUser(type, method, input) {
                 });
         } else if (method == "minecraft") {
             // Make a request to the api + the correct route + parameters
-            axios.get(`${config.base_api_url}/user/GetUsernameFromMinecraft?minecraftid=${input}`)
+            axios.get(`${config.base_api_url}/user/GetUsernameFromMinecraft`, {
+                params: {
+                    minecraftid: removeQuotes(input)
+                }
+            })
                 // Handle error + correct repsonse
                 .then(function (response) {
                     returnedError = false;
@@ -105,7 +126,11 @@ function convertUser(type, method, input) {
 function convertGroup(type, input) {
     if (type == "svid") {
         // Make a request to the api + the correct route + parameters
-        axios.get(`${config.base_api_url}/group/GetSVIDFromName?name=${input}`)
+        axios.get(`${config.base_api_url}/group/GetSVIDFromName`, {
+            params: {
+                name: removeQuotes(input)
+            }
+        })
             // Handle error + correct repsonse
             .then(function (response) {
                 returnedError = false;
@@ -117,7 +142,11 @@ function convertGroup(type, input) {
             });
     } else if (type == "name") {
         // Make a request to the api + the correct route + parameters
-        axios.get(`${config.base_api_url}/group/GetName?svid=${input}`)
+        axios.get(`${config.base_api_url}/group/GetName`, {
+            params: {
+                svid: removeQuotes(input)
+            }
+        })
             // Handle error + correct repsonse
             .then(function (response) {
                 returnedError = false;
