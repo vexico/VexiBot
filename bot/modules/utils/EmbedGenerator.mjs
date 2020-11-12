@@ -1,5 +1,5 @@
 // Bowling Ball - modules/utils/EmbedGenerator.js
-// Written by: Brendan Lane | https://git.imbl.me/brendanlane
+// Written by: Brendan Lane | https://github.com/brendan-lane
 
 // Import Necessary Libraries
 import Discord from 'discord.js';
@@ -10,11 +10,11 @@ import Discord from 'discord.js';
 function generateEmbed(color, title, authorName, authorLink, authorImg, description, footerText, footerImg) {
 	// Create embed using parameters
     var generatedEmbed = new Discord.MessageEmbed()
-	    .setColor(color)
-	    .setTitle(title)
-	    .setAuthor(authorName, authorImg, authorLink)
-	    .setDescription(description)
-	    .setTimestamp()
+		.setColor(color)
+		.setTitle(title)
+		.setAuthor(authorName, authorImg, authorLink)
+		.setDescription(description)
+		.setTimestamp()
 		.setFooter(footerText, footerImg);
 		
 	// Return generated embed
