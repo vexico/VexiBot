@@ -13,5 +13,4 @@ Bowling Ball is licensed under the GNU Generic Public License v3
 To get more info, see LICENSE file
 
 ## Contributors
-* Brendan Lane - Main Developer | [Twitter](https://twitter.com/LoafOfGreenbean) - [Git Page](https://github.com/brendan-lane) - [Steam](https://steamcommunity.com/id/pablogonzales2007/)
-* Alex Balak - Developer | [Git Page (Currently Non-Functional)](https://github.com/elbowbred)
+This project follows the [All Contributors](https://github.com/all-contributors/all-contributors) specification. All contributions are welcome, and will be recognized here.
