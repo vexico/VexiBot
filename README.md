@@ -1,4 +1,4 @@
-# Bowling Ball
+# Vexi Bot
 
 This is a discord bot for the purpouse of recreating VoopAI from the SpookVooper discord with some edits that allow ease of use for the developers' group, Bowling Bank
 
