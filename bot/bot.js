@@ -62,8 +62,6 @@ client.on('message', msg => {
 	// Argument handler
 	const args = msg.content.slice(matchedPrefix.length).trim().split(/ +/);
 	const command = args.shift().toLowerCase();
-
-	// Ping Command
     if (command === `ping`) {
 		// Get current date as number to calculate ping
 		var startPing = Date.now();
@@ -119,7 +117,7 @@ client.on('message', msg => {
 			},
 			{
 				name: "Fun",
-				value: `- ${config.prefix}ping\n- ${config.prefix}pfp <mentioned user(s)>`,
+				value: `- ${config.prefix}ping\n- ${config.prefix}hello\n- ${config.prefix}pfp <mentioned user(s)>`,
 				inline: true
 			},
 			{
