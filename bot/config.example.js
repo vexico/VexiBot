@@ -1,6 +1,6 @@
 export default {
     // Prefix
-    prefix: "bb!",
+    prefix: "v!",
     // Bot token
     token: "",
 }

@@ -25,9 +25,9 @@ const escapeRegex = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 import config from './config.js';
 
 // Embeds
-var embedAuthor = "Bowling Ball";
-var embedImg = "http://files.imbl.me/files/bb.jpg";
-var embedLink = "https://github.com/bowlingballindustries/bowling-ball";
+var embedAuthor = "Vexi";
+var embedImg = "https://i.imgur.com/O5t3uJz.png";
+var embedLink = "https://github.com/vexico/VexiBot";
 
 // Initialization Code
 client.on('ready', () => {
