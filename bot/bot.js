@@ -49,19 +49,19 @@ client.on('ready', () => {
 
 // Command Parser
 client.on('message', msg => {
-	// Define command variables
+    // Define command variables
 
-	// Allow easy finding of the message author
-	const author = msg.author;
+    // Allow easy finding of the message author
+    const author = msg.author;
 
-	// Prefix stuff, idk, I found this on https://discordjs.guide/
-	const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(config.prefix)})\\s*`);
-	if (!prefixRegex.test(msg.content)) return;
+    // Prefix stuff, idk, I found this on https://discordjs.guide/
+    const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(config.prefix)})\\s*`);
+    if (!prefixRegex.test(msg.content)) return;
 
-	const [, matchedPrefix] = msg.content.match(prefixRegex);
-	// Argument handler
-	const args = msg.content.slice(matchedPrefix.length).trim().split(/ +/);
-	const command = args.shift().toLowerCase();
+    const [, matchedPrefix] = msg.content.match(prefixRegex);
+    // Argument handler
+    const args = msg.content.slice(matchedPrefix.length).trim().split(/ +/);
+    const command = args.shift().toLowerCase();
     if (command === `ping`) {
 		// Get current date as number to calculate ping
 		var startPing = Date.now();
