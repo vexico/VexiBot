@@ -22,6 +22,6 @@
   "dependencies": {
     "axios": "^0.19.2",
     "discord.js": "^12.3.1",
-    "spookvooperapi": "^1.1.0"
+    "spookvooperapi": "^1.2.0"
   }
 }
