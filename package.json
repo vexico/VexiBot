@@ -21,7 +21,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "dependencies": {
     "axios": "^0.19.2",
-    "discord.js": "^12.3.1",
+    "discord.js": "^12.5.0",
     "spookvooperapi": "^1.1.0"
   }
 }
